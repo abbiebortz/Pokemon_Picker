@@ -1,0 +1,89 @@
+.App {
+  text-align: center;
+  background-color: #fdfd96; /* Pastel yellow background for the whole app */
+  min-height: 100vh; /* Full height */
+}
+
+/* Style for the navigation bar */
+.App-nav {
+  background-color: #003366; /* Dark blue background for the navigation bar */
+  padding: 1rem 0; /* Padding top and bottom for thicker bar */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; /* Space between the elements */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Subtle shadow for depth */
+  color: white; /* White text color */
+}
+
+.App-title {
+  color: white; /* White text color for the app title */
+  text-decoration: none; /* No underline */
+  font-size: 2rem; /* 32px font size */
+  margin-left: 20px; /* Margin from the left */
+}
+
+/* Adjusted to style the search input according to the new structure */
+.search-container {
+  margin-top: 20px; /* Adjusted margin top */
+}
+
+.search-input {
+  padding: 0.5rem; /* 8px padding */
+  margin-top: 1rem; /* 16px margin top */
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 0.25rem; /* 4px border radius */
+}
+
+.question-mark {
+  font-size: 2rem; /* 32px */
+  color: white; /* White text for the question mark */
+  cursor: pointer; /* Make it look clickable */
+  background: none; /* No background */
+  border: none; /* No border */
+  padding: 0.5rem; /* 8px padding */
+  margin-right: 20px; /* Margin from the right */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .App-title, .question-mark {
+    font-size: 1.5rem; /* Adjust font size for smaller devices */
+  }
+}
+
+@keyframes slide {
+  0% { transform: translateX(120%); }
+  100% { transform: translateX(-300%); }
+}
+
+.slideshow {
+  display: flex;
+  width: 75%;
+  animation: slide 15s linear infinite;
+  justify-content: space-between; 
+}
+
+.slideshow img {
+  width: 10%;
+  margin: 0 50px;
+}
+
+.App-footer {
+  background-color: #003366; 
+  color: white; 
+  text-align: center;
+  padding: 20px 0; 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.search-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
+  grid-gap: 20px;
+  color: #003366;
+  font-family: 'Comic Sans MS', 'Chalkduster', 'Helvetica', 'Arial', sans-serif;
+}
